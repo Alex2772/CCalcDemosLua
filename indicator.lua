@@ -1,0 +1,10 @@
+w=cp.Window.new("Indicator")
+v=0
+--w:addView(s)
+w.render=function(f)
+  v=v+2*(cp.keyState(1)-cp.keyState(9))
+  v=math.max(math.min(v,8192),0)
+  cp.indicator(v/8192,v/8192,v/8192)
+  f:string(0,12,v,1,15)
+end
+cp.displayWindow(w)

@@ -1,0 +1,1 @@
+cp.message(cp.random())
